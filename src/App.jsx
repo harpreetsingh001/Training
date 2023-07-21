@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from 'react'
+import Add from './components/Add'
+import Divide from './components/Divide'
+import Multiply from './components/Multiply'
+import MyButton from './components/MyButton'
 
-function MyButton() {
-  const [c, setC] = useState(0);
-  useEffect(() => {
-    setTimeout(() => {
-      setC((c) => c + 1);
-    }, 1000);
-  });
-  return (<p>Running {c} times</p>);
-};
+function App() {
+  return (
+    <div>
+      <Add a={5} b={10} />
+      <Divide a={5} b={10} />
+      <Multiply a={5} b={10} />
+      <MyButton a={5} b={10} />
+    </div>
+  )
+}
 
-export default MyButton;
+export default App
